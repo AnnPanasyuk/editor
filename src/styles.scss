@@ -1,1 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
+
+.editor-link {
+  font-size: 1rem;
+  color: blue;
+  text-decoration: none;
+  &:hover {
+    color: blue
+  }
+}
+.editor-broken-link {
+  font-size: 1rem;
+  color: #000;
+  text-decoration: none;
+  &:hover {
+    color: #000;
+    text-decoration: none;
+  }
+}
