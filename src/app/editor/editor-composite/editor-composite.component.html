@@ -1,0 +1,20 @@
+<form [formGroup]="form">
+  <app-editor
+    #editorElement
+    class="post-textarea"
+    formControlName="editor"
+    [editorMaxLength]="editorMaxLength"
+    [height]="height"
+    [minHeight]="minHeight"
+    [maxHeight]="maxHeight"
+    [placeholder]="placeholder"
+    [isCleanState]="isCleanState"
+    [result]="result"
+    (editorKeyup)="onEditorKeyup($event)"
+    (editorKeydown)="editorKeydown.emit($event)"
+    (editorFocus)="editorFocus.emit($event)"
+    (editorBlur)="editorBlur.emit($event)"
+    (findSpecialTag)="findSpecialTag($event)"
+    (specialTagWrapped)="specialTagWrapped()"
+  ></app-editor>
+</form>

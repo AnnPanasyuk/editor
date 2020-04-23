@@ -1,0 +1,13 @@
+<app-editor-composite
+  #postTextarea
+  class="post-textarea"
+  [editorFormControl]="form.controls['body']"
+  [editorMaxLength]="maxSymbolsSize"
+  [minHeight]="48"
+  [maxHeight]="510"
+  [placeholder]="'Placeholder'"
+  [isCleanState]="isCleanEditor"
+  (editorKeyup)="onPostTextareaKeyup($event)"
+  (editorFocus)="onInputFocus()"
+  (specialTextType)="checkSpecialTextType($event)"
+></app-editor-composite>
